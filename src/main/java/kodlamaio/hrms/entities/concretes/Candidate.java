@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,6 +16,11 @@ import java.util.List;
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 @Table(name = "candidates")
 public class Candidate extends User{
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private int id;
+
     @Column(name = "first_name")
     private String firstName;
 
