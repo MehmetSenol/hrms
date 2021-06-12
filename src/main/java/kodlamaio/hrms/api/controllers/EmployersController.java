@@ -1,7 +1,6 @@
 package kodlamaio.hrms.api.controllers;
 
 import kodlamaio.hrms.business.abstracts.EmployerService;
-import kodlamaio.hrms.business.abstracts.JobPostingsService;
 import kodlamaio.hrms.core.utilities.DataResult;
 import kodlamaio.hrms.core.utilities.Result;
 import kodlamaio.hrms.entities.concretes.Employer;
@@ -30,9 +29,6 @@ public class EmployersController {
 
     @PostMapping("/add")
     public Result add(@RequestBody Employer employer){
-
         return this.employerService.add(employer);
-
-
     }
 }
