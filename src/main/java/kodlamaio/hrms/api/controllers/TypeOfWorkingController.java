@@ -1,11 +1,14 @@
 package kodlamaio.hrms.api.controllers;
 
 import kodlamaio.hrms.business.abstracts.TypeOfWorkingService;
+import kodlamaio.hrms.core.utilities.DataResult;
 import kodlamaio.hrms.core.utilities.Result;
 
 import kodlamaio.hrms.entities.concretes.TypeOfWorking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -21,5 +24,10 @@ public class TypeOfWorkingController {
     @PostMapping("/add")
     public Result add(@RequestBody TypeOfWorking typeOfWorking) {
         return this.typeOfWorkingService.add(typeOfWorking);
+    }
+
+    @GetMapping("/getall")
+    public DataResult<List<TypeOfWorking>> getAll(){
+        return this.typeOfWorkingService.getAll();
     }
 }

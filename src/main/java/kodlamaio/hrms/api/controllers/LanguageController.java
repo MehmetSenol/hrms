@@ -4,12 +4,10 @@ import kodlamaio.hrms.business.abstracts.LanguageService;
 import kodlamaio.hrms.core.utilities.Result;
 import kodlamaio.hrms.entities.concretes.Languages;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/language")
 public class LanguageController {
     private LanguageService languageService;

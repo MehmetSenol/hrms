@@ -4,12 +4,10 @@ import kodlamaio.hrms.business.abstracts.CandidateJobExperiencesService;
 import kodlamaio.hrms.core.utilities.Result;
 import kodlamaio.hrms.entities.concretes.CandidateJobExperiences;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("api/candidatejobexperiencescontroller")
 public class CandidateJobExperiencesController {
     private CandidateJobExperiencesService candidateJobExperiencesService;

@@ -34,6 +34,7 @@ public class JobPostingsManager implements JobPostingsService {
         return new SuccessResult("Aktif İş İlanı Pasif Hale Gelmiştir");
     }
 
+
     @Override
     public DataResult<List<JobPostings>> getByisActivateTrue() {
         return new SuccessDataResult<>(this.jobPostingDao.getByisActivateTrue(),"Tüm Aktif İş İlanları Listelenmiştir");

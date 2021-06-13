@@ -11,6 +11,7 @@ import java.util.List;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/jobPostings")
 public class JobPostingController {
     private JobPostingsService jobPostingsService;
@@ -44,6 +45,8 @@ public class JobPostingController {
     public Result activePosting(@RequestParam int id){
         return this.jobPostingsService.activePosting(id);
     }
+
+
 
 
 
